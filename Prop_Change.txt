@@ -1,0 +1,5 @@
+update the code and fix the last episode downloading so that weekly podcast programs
+are only updated/downloaded when a new version arrives.
+
+this is my first time using GitHub, and I'm only a novice at programming python, so if
+I'm doing something wrong, please teach me don't condemn me. :-)
