@@ -29,7 +29,7 @@ import argparse
 import urllib2
 import xml.dom.minidom
 import datetime
-from time import gmtime, strftime, strptime, mktime
+from time import gmtime, strftime, strptime, mktime, localtime
 import sqlite3
 import shutil
 import smtplib
@@ -53,7 +53,7 @@ MODE_IMPORT = 80
 
 NUM_MAX_DOWNLOADS = 4
 
-DOWNLOAD_DIRECTORY = "podcasts"
+DOWNLOAD_DIRECTORY = "Podcasts"
 
 # Added 2011-10-06 Werner Avenant - added current_dictory here so it can be global
 current_directory = ''
@@ -158,7 +158,7 @@ def main(argv):
         has_error = 1
 
     print "Default encoding: " + sys.getdefaultencoding()
-    todays_date = strftime("%a, %d %b %Y %H:%M:%S", gmtime())
+    todays_date = strftime("%a, %d %b %Y %H:%M:%S", localtime())
     print "Current Directory: ", current_directory
     if does_database_exist(current_directory):
         connection = connect_database(current_directory)
